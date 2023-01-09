@@ -1,0 +1,158 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<ctype.h>
+#include<string.h>
+#include<time.h>
+typedef struct Node {
+    int jc;//判断存储的是数字还是符号
+    int val;
+    struct Node * right;
+    struct Node * left;
+} *List;
+int opc(char ch)
+{
+    switch (ch)
+    {
+    case '^':
+        return 3;
+    case '*':case '/':
+        return 2;
+    case '+':case '-':
+        return 1;
+    case '(':case ')':
+        return 0;
+    default:
+        return -1;
+    }
+}
+List create(List p,char c)
+{
+    if(p==NULL)
+    {
+        p=(List)malloc(sizeof(struct Node));
+        p->left=NULL;
+        p->right=NULL;
+        p->val=c;
+        return p;
+    }
+    else
+    {
+        List pp=(List)malloc(sizeof(struct Node));
+        pp->left=p;
+        pp->right=NULL;
+        p->right=pp;
+        pp->val=c;
+        return pp;
+    }
+}
+List de(List p)
+{
+    if(p==NULL)
+    return NULL;
+    else
+    {
+        List pp=p->left;
+        if(pp)
+        pp->right=p->right;
+        if(p->right)
+        (p->right)->left=pp;
+        free(p);
+        return pp;//返回删除结点的左边
+    }
+}
+void print(List p)
+{
+    while(p)
+    {
+        if(p->jc)
+        printf("%c ",p->val);
+        else
+        printf("%d ",p->val);
+        p=p->right;
+    }
+    printf("\n");
+    return ;
+}
+long long power(long long a,long long b)
+{
+	long long tmp=1;
+	for(long long i=0;i<b;i++)
+	{
+		tmp*=a;
+	}
+	return tmp;
+}
+int cal(char ch,int a,int b)
+{
+    switch (ch)
+    {
+    case '+':
+        return a+b;
+    case '-':
+        return a-b;
+    case '*':
+        return a*b;
+    case '/':
+        return a/b;
+    default:
+        return power(a,b);
+    }
+}
+int main()
+{
+    List data=NULL,op=NULL;//数字、符号
+    List data2=data,op2=op;
+    char ch;
+    while(scanf("%c",&ch)!=EOF)//中缀转后缀
+    {
+        if(isdigit(ch))
+        {
+            data2=create(data2,ch-'0');
+            if(data==NULL)
+            data=data2;
+            data2->jc=0;//代表数字
+        }        
+        else if(opc(ch)>=0)
+        {
+            while(op2&&ch!='('&&opc(op2->val)>=opc(ch)&&((op2->val!='^')||(ch!='^')))
+            {
+                if(op2->val=='('&&ch==')')
+                break;
+                data2=create(data2,op2->val);
+                data2->jc=1;//代表符号
+                op2=de(op2);
+            }
+            if(op2&&op2->val=='('&&ch==')')
+            op2=de(op2);
+            else
+            {
+                op2=create(op2,ch);
+                if(op==NULL)
+                op=op2;
+                op2->jc=1; 
+            }          
+        }
+    }
+    while(op2)
+    {
+        data2=create(data2,op2->val);
+        data2->jc=1;
+        op2=de(op2);
+    }
+
+    print(data);
+    List tmp=data;
+    while (data->right)
+    {
+        while(tmp->right&&tmp->jc==0)
+        tmp=tmp->right;
+        char cc=tmp->val;
+        (tmp->left)->left->val=cal(cc,(tmp->left)->left->val,(tmp->left)->val);
+        de(tmp->left);
+        tmp=de(tmp);
+        print(data);
+    }
+    system("pause");
+    return 0;
+}
