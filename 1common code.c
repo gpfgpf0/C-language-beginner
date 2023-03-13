@@ -1,4 +1,4 @@
-//Í·ÎÄ¼ş
+//å¤´æ–‡ä»¶
 //#include<stdio.h>
 //#include<stdlib.h>
 //#include<math.h>
@@ -17,16 +17,16 @@
 //	printf("%d",search(arr,n,10)); 
 //	return 0;
 //}
-//ÖØ¶¨Ïò
+//é‡å®šå‘
 //freopen("c3-11.dat", "r", stdin);
 //freopen("file.out", "w", stdout);
-//¼ÆÊ±
+//è®¡æ—¶
     // clock_t start,end;
     // start=clock();
     // end=clock();
     // printf("%lf",(double)(end-start)/CLOCKS_PER_SEC);
 
-//×î´ó¹«Ô¼Êı
+//æœ€å¤§å…¬çº¦æ•°
 //int gcd(int a,int b)
 //{
 //	int c;
@@ -38,7 +38,7 @@
 //	}
 //	return b;
 // }
-//³Ë·½£¬power 
+//ä¹˜æ–¹ï¼Œpower 
 // long long power(long long a,long long b)
 // {
 // 	long long tmp=1;
@@ -48,7 +48,7 @@
 // 	}
 // 	return tmp;
 // }
-//¿ìËÙÃİ ¹êËÙ³Ë ¿ìËÙ³Ë
+//å¿«é€Ÿå¹‚ é¾Ÿé€Ÿä¹˜ å¿«é€Ÿä¹˜
 //https://blog.csdn.net/qq_19782019/article/details/85621386?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166519640216782428611056%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166519640216782428611056&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-85621386-null-null.142^v51^control,201^v3^add_ask&utm_term=%E5%BF%AB%E9%80%9F%E5%B9%82&spm=1018.2226.3001.4187 
 //https://blog.csdn.net/Cyan_rose/article/details/83065026?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166519672716782412577917%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166519672716782412577917&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-83065026-null-null.142^v51^control,201^v3^add_ask&utm_term=%E9%BE%9F%E9%80%9F%E4%B9%98&spm=1018.2226.3001.4187
 //#include<stdio.h>
@@ -71,10 +71,10 @@
 // long long fastPower(long long base, long long power) {
 //     long long result = 1;
 //     while (power > 0) {
-//         if (power & 1) {//´Ë´¦µÈ¼ÛÓÚif(power%2==1)
+//         if (power & 1) {//æ­¤å¤„ç­‰ä»·äºif(power%2==1)
 //             result = result * base % 1000;
 //         }
-//         power >>= 1;//´Ë´¦µÈ¼ÛÓÚpower=power/2
+//         power >>= 1;//æ­¤å¤„ç­‰ä»·äºpower=power/2
 //         base = (base * base) % 1000;
 //     }
 //     return result;
@@ -82,8 +82,8 @@
 
 
 
-//ÇóËØÊı
-//°£ÊÏÉ¸ 
+//æ±‚ç´ æ•°
+//åŸƒæ°ç­› 
 //long long a[100000010]={0};
 //int c[100000000];
 //int main()
@@ -110,7 +110,7 @@
 //	}
 //	return 0;
 //}
-//Å·À­º¯Êı
+//æ¬§æ‹‰å‡½æ•°
 //int eular(int n) 
 //{
 //	int ans=n;
@@ -142,7 +142,7 @@
 //	else
 //	return 0;
 //}
-//¿ìËÙÅÅĞò£¨´«0ºÍsz-1£© 
+//å¿«é€Ÿæ’åºï¼ˆä¼ 0å’Œsz-1ï¼‰ 
 //int partition(int a[],int left,int right)
 //{
 //	int i=left-1,j,tmp;
@@ -168,7 +168,7 @@
 //		sort(a,q+1,right);
 //	}
 //}
-//Ã°ÅİÅÅĞò£¨´«sz£© 
+//å†’æ³¡æ’åºï¼ˆä¼ szï¼‰ 
 //void bubble_sort(int arr[],int sz)
 //{
 //	int i=0;
@@ -193,7 +193,7 @@
 //	}
 //}
 
-//ÕÛ°ë²éÕÒ£¨´«Êı×éÔªËØ¸öÊı£© 
+//æŠ˜åŠæŸ¥æ‰¾ï¼ˆä¼ æ•°ç»„å…ƒç´ ä¸ªæ•°ï¼‰ 
 //int search(int arr[],int n,int sz)
 //{
 //	int left = 0;
@@ -217,7 +217,7 @@
 //	} 
 //	return -1;	
 //}
-//ÕÒµ½µÚÒ»´Î³öÏÖÎ»ÖÃ£¨Êı×éÏÂ±ê£©
+//æ‰¾åˆ°ç¬¬ä¸€æ¬¡å‡ºç°ä½ç½®ï¼ˆæ•°ç»„ä¸‹æ ‡ï¼‰
 //int search(int tmp)
 //{
 //	int*p=bsearch(&tmp,arr,n,sizeof(int),cmp);
@@ -239,7 +239,7 @@
 
 
 
-//´óÕûÊıÏà³Ë 
+//å¤§æ•´æ•°ç›¸ä¹˜ 
 // int int1[1005],int2[1005];
 // int result[1000010];
 // void pplus(char *p1,char *p2,char *p)
@@ -340,12 +340,12 @@
 
 
 
-//Ëæ»úÊıÉú³É 
+//éšæœºæ•°ç”Ÿæˆ 
 //srand(time(NULL));
 //any=rand();
 
 
-//Ä³ÄêÄ³ÔÂÄ³ÈÕÊÇĞÇÆÚ¼¸ 
+//æŸå¹´æŸæœˆæŸæ—¥æ˜¯æ˜ŸæœŸå‡  
 //#include<stdio.h>
 //#include<stdlib.h>
 //#include<math.h>
@@ -412,7 +412,7 @@
 //	return 0;
 //}
 
-//Ä³Á½ÌìÖ®¼ä²î¶àÉÙÌì
+//æŸä¸¤å¤©ä¹‹é—´å·®å¤šå°‘å¤©
 //int days(int n1,int n2)
 //{
 //	int year1=n1/10000;
@@ -440,7 +440,7 @@
 //	rn=29;
 //	else
 //	rn=28;
-//	switch(mm)//¾à1ÔÂ1ÈÕÓĞ¶àÉÙÌì 
+//	switch(mm)//è·1æœˆ1æ—¥æœ‰å¤šå°‘å¤© 
 //	{
 //		case 1:
 //			return dd-1;
@@ -468,7 +468,7 @@
 //			return dd+305+rn;
 //	}
 //}
-//int years(int yy1,int yy2)//yy1ÄêµÄ1ÔÂ1ÈÕµ½yy2µÄ1ÔÂ1ÈÕ¹²¶àÉÙÌì
+//int years(int yy1,int yy2)//yy1å¹´çš„1æœˆ1æ—¥åˆ°yy2çš„1æœˆ1æ—¥å…±å¤šå°‘å¤©
 //{
 //	int sum=0;
 //	for(int i=yy1;i<yy2;i++)
@@ -482,8 +482,8 @@
 //} 
 
 
-//ºÓÄÚËş
-//¶à·ÖÖ§µİ¹é 
+//æ²³å†…å¡”
+//å¤šåˆ†æ”¯é€’å½’ 
 //#include<stdio.h>
 //void game(int i,char a,char b,char c)
 //{
@@ -511,7 +511,7 @@
 //}
 
 
-//ÅÅÁĞ£¬n 
+//æ’åˆ—ï¼Œn 
 //#include<stdio.h>
 //#include<stdlib.h>
 //#include<math.h>
@@ -519,13 +519,13 @@
 //#include<string.h>
 //#include<time.h>
 //int b[10]={1,1,1,1,1,1,1,1,1,1};
-//int a[10]={0,0,0,0,0,0,0,0,0,0};//µİ¹éÃ¿²ãÊÇ¼¸ 
+//int a[10]={0,0,0,0,0,0,0,0,0,0};//é€’å½’æ¯å±‚æ˜¯å‡  
 //int n;
 //void print(int m,int c)
 //{
 //	if(m==1)
 //	{
-//		for(int j=1;j<=n;j++)//µ½×îºóÒ»²ãÊ±´òÓ¡Ç°¼¸²ã 
+//		for(int j=1;j<=n;j++)//åˆ°æœ€åä¸€å±‚æ—¶æ‰“å°å‰å‡ å±‚ 
 //		if(a[j])
 //		printf("%d ",a[j]);
 //		for(int j=1;j<=n;j++)
@@ -538,7 +538,7 @@
 //	else
 //	for(int i=1;i<=n;i++)
 //	{
-//		if(!b[i])continue;//±ê¼ÇÒÑ±»Ä³²ãÑ¡ÖĞµÄÔªËØ 
+//		if(!b[i])continue;//æ ‡è®°å·²è¢«æŸå±‚é€‰ä¸­çš„å…ƒç´  
 //		
 //		b[i]=0;
 //		a[c]=i;
@@ -554,7 +554,7 @@
 //	return 0;
 // }
 
-//×éºÏ£¬Cnm 
+//ç»„åˆï¼ŒCnm 
 //#include<stdio.h>
 //#include<stdlib.h>
 //#include<math.h>
@@ -597,7 +597,7 @@
 //	return 0;
 //}
 
-//Ô¼Éª·òÎÊÌâ 
+//çº¦ç‘Ÿå¤«é—®é¢˜ 
 //int arr[110];
 //int brr[110];
 //int main()
@@ -642,8 +642,8 @@
 
 
 
-//×î³¤ÉÏÉı×ÓĞòÁĞ£¨´ı²â£©
-//int low[100010];//low[i]±íÊ¾³¤¶ÈÎªiµÄLIS½áÎ²ÔªËØ×îĞ¡Öµ£¬Ã¿´Î¸üĞÂ
+//æœ€é•¿ä¸Šå‡å­åºåˆ—ï¼ˆå¾…æµ‹ï¼‰
+//int low[100010];//low[i]è¡¨ç¤ºé•¿åº¦ä¸ºiçš„LISç»“å°¾å…ƒç´ æœ€å°å€¼ï¼Œæ¯æ¬¡æ›´æ–°
 // int search(int n,int sz)
 // {
 // 	int left = 1;
